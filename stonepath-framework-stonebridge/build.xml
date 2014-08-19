@@ -17,11 +17,6 @@
     <mkdir dir="${release}/${git_tag}"/>
   </target>
 
-    <target name="init">
-    <mkdir dir="${build}"/>
-    <mkdir dir="${release}/${git_tag}"/>
-  </target>
-
   <target name="compile" depends="init"
         description="compile the source " >
     <javac srcdir="${src}" destdir="${build}"/>
