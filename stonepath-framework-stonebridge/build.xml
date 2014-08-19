@@ -16,6 +16,7 @@
     <mkdir dir="${build}"/>
     <mkdir dir="${release}/${git_tag}"/>
   </target>
+  
 
   <target name="compile" depends="init"
         description="compile the source " >
