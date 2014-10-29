@@ -14,7 +14,7 @@
   
   <target name="init">
     <mkdir dir="${build}"/>
-    <mkdir dir="${release}/${git_tag}"/>
+    <mkdir dir="${release}"/>
   </target>
   
 
@@ -26,7 +26,7 @@
   <target name="release" depends="compile"
         description="generate the distribution" >
 
-    <jar jarfile="${release}/${git_tag}/${ant.project.name}-${git_tag}.jar" basedir="${build}"/>
+    <jar jarfile="${release}/${ant.project.name}.jar" basedir="${build}"/>
   </target>
 
   <target name="clean"

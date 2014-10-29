@@ -46,7 +46,10 @@ public class BridgeConnection {
 		StringWriter writer = new StringWriter();
 		Gson gson = new Gson();
 		IOUtils.copy(inputStream, writer, ENCODING);
-		return (BridgeCommand) gson.fromJson(writer.toString(), BridgeCommand.class);
+		
+		System.out.println("DEBUG " + writer.toString());
+		
+		return gson.fromJson(writer.toString(), BridgeCommand.class);
 	}
 	
 	public void disconnect() throws IOException{
